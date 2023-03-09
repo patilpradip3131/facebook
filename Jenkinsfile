@@ -4,14 +4,14 @@ pipeline {
 		  
 		      label {
 			  
-			      label "slave-1"
-				  customWrokspace "/mnt/project/game-of-life"
+			      label "built-in"
+				  customWrokspace "/mnt/host-index"
 			  }
 		  }
 		  
 		  stages {
 		  
-		     stage ("package") {
+		     stage ("p") {
 			 
 			     steps {
 				 
