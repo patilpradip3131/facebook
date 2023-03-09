@@ -5,21 +5,19 @@ pipeline {
 		      label {
 			  
 			      label "slave-1"
-				  customWrokspace "/mnt/project/game-of-life"
+				  customWrokspace "/mnt/host-index"
 			  }
 		  }
 		  
 		  stages {
 		  
-		     stage ("package") {
+		     stage ("host on slave-1") {
 			 
 			     steps {
-				 
-				 sh "sudo rm -rf /root/.m2/repository"
-				 sh "sudo mvn clean install"
-				 sh "sudo cp -r /mnt/project/game-of-life/gameoflife-web/target/gameoflife.war /mnt/server/apache-tomcat-9.0.73/webapps"
-				 
-			
+				 sh "sudo rm -rf /var/www/html/*"
+				 sh "sudo cp -r /mnt/host-index/index.html /var/www/html/"
+				 sh "sudo chmod -R 777 /var/www/html/index.html"
+				
 				 }
 			 
 			 
