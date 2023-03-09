@@ -5,7 +5,7 @@ pipeline {
 		      label {
 			  
 			      label "slave-1"
-				  customWrokspace "/mnt/host-index"
+				  customWorkspace "/mnt/host-index"
 			  }
 		  }
 		  
