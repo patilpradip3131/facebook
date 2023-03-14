@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Deploy to Container-1') {
 	    steps {
-               sh "sudo docker run -itdp 8080:80 -v --name container-1 /mnt/jenkins-slave/workspace/docker-multi_master/index.html:/usr/local/apache2/htdocs/index.html httpd httpd1"      
+               sh "sudo docker run -itdp 8080:80 -v /mnt/jenkins-slave/workspace/docker-multi_master/index.html:/usr/local/apache2/htdocs --name httpd1 httpd"      
       }
     }
   }
