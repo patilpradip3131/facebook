@@ -11,7 +11,7 @@ pipeline {
 	    steps {
 	       sh "sudo docker stop container-1"
                sh "sudo docker rm container-1"
-	       sh "sudo docker run -itdp 80:80 -v vol1:/usr/local/apache2/htdocs --name container-1 httpd"
+	       sh "sudo docker run -itdp 80:80 -v /var/lib/docker/volumes/vol1/_data/index.html:/usr/local/apache2/htdocs --name container-1 httpd"
       }
     }
   }
