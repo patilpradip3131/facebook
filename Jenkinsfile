@@ -3,7 +3,7 @@ pipeline {
         label {
 		
 		    label "slave-1"
-			CustomWorkspace "/mnt/vol1"
+			customWorkspace "/mnt/vol1"
 		}
   }
   stages {
