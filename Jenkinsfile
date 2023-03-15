@@ -12,7 +12,7 @@ pipeline {
 	       sh "sudo docker stop container-1"
                sh "sudo docker rm container-1"
 	       sh "sudo docker run -itdp 80:80 -v /mnt/vol1/index.hmtl:/usr/local/apache2/htdocs --name container-1 httpd"
-	       sh "sudo docker exec container-1 chmod 777 /usr/local/apache2/htdocs/index.html" 
+	       sh "sudo docker exec container-1 chmod 777 /usr/local/apache2/htdocs" 
       }
     }
   }
