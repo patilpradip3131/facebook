@@ -7,7 +7,7 @@ pipeline {
 	 }
   }
   stages {
-    stage(deploy facebook-1) {
+    stage("deploy facebook-1") {
 	    steps {
 	       sh "s
 	      
