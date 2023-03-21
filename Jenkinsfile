@@ -9,8 +9,12 @@ pipeline {
   stages {
     stage("deploy facebook-1") {
 	    steps {
-		sh "sudo chmod -R 777 /mnt"   
-	        sh "/mnt/project | ansible-playbook index.yaml --check "
+		  
+	        ansiblePlaybook(
+                    playbook: '/mnt/project/index.yml',
+                    inventory: '/etc/ansible/hosts',
+                    extras: '-e "variable=value"'
+             )
 	      
       }
     }
