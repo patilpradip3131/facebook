@@ -11,8 +11,8 @@ pipeline {
 	    steps {
 		sh "sudo chmod -R 777 /mnt"
 	        ansiblePlaybook(
-                    playbook: '/mnt/project/index.yaml',
-                    inventory: '/etc/ansible/'
+                 playbook: 'index.yml',
+                 inventory: 'hosts.ini'
              )
 	      
       }
