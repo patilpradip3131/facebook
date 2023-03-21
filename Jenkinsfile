@@ -10,7 +10,7 @@ pipeline {
     stage("deploy facebook-1") {
 	    steps {
 		sh "sudo chmod -R 777 /mnt"
-	        sh "sudo ansible-playbook index.yaml --check"
+	        sh "ansible-playbook index.yaml --check"
              
 	      
       }
