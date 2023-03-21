@@ -11,8 +11,8 @@ pipeline {
   stages {
     stage('Deploy q1 branch') {
       steps {
-        ansiblePlaybook credentialsId: 'ansible-creds',
-          inventory: 'hosts/host1.ini',
+        ansiblePlaybook credentialsId: 'id_rsa',
+          inventory: '/etc/ansible/hosts',
           playbook: '/mnt/project/index.yaml'
       }
     }
