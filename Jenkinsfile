@@ -12,7 +12,7 @@ pipeline {
     stage('Deploy q1 branch') {
       steps {
         ansiblePlaybook credentialsId: 'id_rsa',
-          inventory: '/etc/ansible/hosts',
+          inventory: 'hosts',
           playbook: '/mnt/project/index.yaml'
       }
     }
