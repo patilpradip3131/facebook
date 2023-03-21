@@ -12,8 +12,7 @@ pipeline {
 		sh "sudo chmod -R 777 /mnt"
 	        ansiblePlaybook(
                     playbook: '/mnt/project/index.yaml',
-                    inventory: '/etc/ansible/hosts',
-                    extras: '-e "variable=value"'
+                    inventory: '/etc/ansible/'
              )
 	      
       }
