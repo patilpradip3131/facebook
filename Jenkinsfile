@@ -1,19 +1,20 @@
 pipeline {
-  agent {
-     label {
-	     label "built-in"
-		 customWorkspace "/mnt/project"
-	 
-	 }
-  }
+	agent {
+		label {
+		   
+			label "built-in"
+			customWorkspace "/mnt/project"
+			
+		}		
+	}	
+
   stages {
-    stage("deploy facebook-1") {
-	    steps {
-		sh "sudo chmod -R 777 /mnt"
-	        sh "ansible-playbook index.yaml --check"
-             
-	      
+    stage('Deploy q1 branch') {
+      steps {
+        ansiblePlaybook credentialsId: 'ansible-creds',
+          inventory: 'hosts/host1.ini',
+          playbook: '/mnt/project/index.yaml'
       }
     }
-  }
+  }	  
 }
