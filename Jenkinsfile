@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage("Deploy facebook-1") {
 	    steps {      
-               sh "ansible-playbook index.yaml --check"
+               sh "sudo ansible-playbook index.yaml --check"
       }
     }
   }	  
