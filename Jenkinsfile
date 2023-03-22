@@ -11,9 +11,7 @@ pipeline {
   stages {
     stage('Deploy facebook-1') {
       steps {
-        ansiblePlaybook credentialsId: 'id_rsa',
-          inventory: '/etc/ansible/hosts',
-          playbook: '/mnt/project/index.yaml'
+       sh "ansible-playbook /mnt/project/index.yaml -i /etc/ansible/hosts"
       }
     }
   }	  
