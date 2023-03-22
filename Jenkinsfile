@@ -9,7 +9,7 @@ pipeline {
 	}	
 
   stages {
-    stage('Deploy q1 branch') {
+    stage('Deploy facebook-1') {
       steps {
         ansiblePlaybook credentialsId: 'id_rsa',
           inventory: 'hosts',
