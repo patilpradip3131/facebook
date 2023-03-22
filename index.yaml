@@ -15,7 +15,8 @@
     - name: start https
       action: service name=httpd state=started
 
+    - name: copy
+      action: copy src=/mnt/project/index.html dest=/var/www/html/
+      
     - name: permission
-      ansible.builtin.file:
-        path: /var/www/html/index.html
-        mode: '0644'
+      command: chmod 777 /var/www/html/index.html
