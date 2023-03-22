@@ -3,13 +3,13 @@ pipeline {
 		label {
 		   
 			label "built-in"
-			customWorkspace "mnt/project"
+			customWorkspace "/mnt/project"
 			
 		}		
 	}	
 
   stages {
-    stage("Deploy facebook-1") {
+    stage("facebook1") {
 	    steps {      
                sh "sudo ansible-playbook index.yaml --check"
       }
