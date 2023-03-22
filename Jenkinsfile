@@ -9,7 +9,7 @@ pipeline {
 	}	
 
   stages {
-    stage('Deploy facebook-1') {
+    stage("Deploy facebook-1") {
       steps {
        sh "ansible-playbook test.yaml --check"
       }
