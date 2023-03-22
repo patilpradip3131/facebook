@@ -3,7 +3,7 @@ pipeline {
 		label {
 		   
 			label "built-in"
-			customWorkspace "/mnt/project"
+			customWorkspace "/home/pradip/project"
 			
 		}		
 	}	
@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage("facebook1") {
 	    steps {
-	       sh "sudo chmod -R 777 /mnt"
+	       sh "sudo chmod -R 777 /home"
                sh "ansible-playbook index.yaml --check"
       }
     }
