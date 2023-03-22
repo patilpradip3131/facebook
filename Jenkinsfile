@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage("facebook1") {
 	    steps {      
-               sh "su -pradip ansible-playbook index.yaml --check"
+               sh "sudo -E ansible-playbook index.yaml --check"
       }
     }
   }	  
