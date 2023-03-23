@@ -11,8 +11,8 @@ pipeline {
   stages {
     stage("facebook1") {
 	    steps {
-	       sh "sudo chmod -R 777 /mnt/project"
-               sh "sudo su -c ansible-playbook index.yaml pradip"
+	       
+               sh "ansible-playbook index.yaml"
       }
     }
   }	  
