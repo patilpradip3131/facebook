@@ -13,7 +13,7 @@ pipeline {
 	    steps {
 	       sh "sudo chmod -R 777 /mnt/project"
 	       sh "pwd"
-	       sh "ls-ltra"
+	       sh "ls -ltra"
                sh "sudo su -c ansible-playbook index.yaml pradip"
       }
     }
